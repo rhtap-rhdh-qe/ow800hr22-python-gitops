@@ -1,0 +1,18 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata: 
+  labels: 
+    app.kubernetes.io/instance: ow800hr22-python
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: ow800hr22-python 
+  name: ow800hr22-python
+spec:
+  port:
+    targetPort: 8081 
+  tls:
+    insecureEdgeTerminationPolicy: Redirect
+    termination: edge
+  to:
+    kind: Service
+    name: ow800hr22-python
+    weight: 100 

@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  argocd/app-name: ow800hr22-python
+  janus-idp.io/tekton: ow800hr22-python
+  backstage.io/kubernetes-id: ow800hr22-python
+  backstage.io/kubernetes-namespace: tssc-app 
+  app.kubernetes.io/part-of: ow800hr22-python
+resources:
+  - deployment.yaml
+  - route.yaml
+  - service.yaml

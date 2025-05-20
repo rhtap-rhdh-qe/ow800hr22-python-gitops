@@ -1,0 +1,6 @@
+apiVersion: "pipelinesascode.tekton.dev/v1alpha1"
+kind: Repository
+metadata:
+  name: ow800hr22-python-gitops-repository
+spec:
+  url: https://github.com/rhtap-rhdh-qe/ow800hr22-python-gitops
